@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="4be749d4-e8a0-41c5-b41a-459b21943aae" name="更改" comment="Test8">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/MathHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/SharedConstants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/ResourceHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/ClientTickInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/Component.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/Frame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/HandleResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/KeyMap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/Scene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/Ticker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/swing/SwingFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/FrameAnimator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/PixelLinerTextureManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/SubTextureReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/Texture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/gl/GlTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/graphics/GraphicsSubTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/graphics/GraphicsTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/vlt/VolatileTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickRecorder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/NoelByteBuffer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlCharacter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlImageAtlas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlLayer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlPose.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlSequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/RectPacking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/RectPackingAtlas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/Settings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fragment_shader.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/noel.pxls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/test.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/unifont-15.1.01.bdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/unifont-15.1.02.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/vertex_shader.shader" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Intro2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test6Gl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test8.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="package-info" />
+        <option value="module-info" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2VVzOmmtdGGfjiS0IjDDbobRR3P" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Windowsredstone/IdeaProjects/NyaruruTale/src/main/resources&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Windowsredstone/IdeaProjects/NyaruruTale/src/main/java/io/github/e9ae9933/nyaruru/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.github.e9ae9933.nyaruru.pxlsloader" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Windowsredstone\IdeaProjects\NyaruruTale\src\main\resources" />
+      <recent name="C:\Users\Windowsredstone\IdeaProjects\NyaruruTale\src\main\java\io\github\e9ae9933\nyaruru\pxlsloader" />
+      <recent name="C:\Users\Windowsredstone\IdeaProjects\NyaruruTale\src\main\java\io\github\e9ae9933\nyaruru" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test" />
+      <recent name="io.github.e9ae9933.nyaruru.pxlsloader" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.Test8">
+    <configuration name="Intro2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Intro2" />
+      <module name="NyaruruTale.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test6Gl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Test6Gl" />
+      <module name="NyaruruTale.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Test7" />
+      <module name="NyaruruTale.test" />
+      <option name="VM_PARAMETERS" value="-Xmx128M -XX:+UseZGC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Test8" />
+      <module name="NyaruruTale.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="org.lwjgl.demo.intro.Intro2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.lwjgl.demo.intro.Intro2" />
+      <module name="NyaruruTale.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.lwjgl.demo.intro.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="应用程序.Test8" />
+      <item itemvalue="应用程序.Test7" />
+      <item itemvalue="应用程序.Intro2" />
+      <item itemvalue="应用程序.Test6Gl" />
+      <item itemvalue="应用程序.org.lwjgl.demo.intro.Intro2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.Test8" />
+        <item itemvalue="应用程序.Test7" />
+        <item itemvalue="应用程序.Test6Gl" />
+        <item itemvalue="应用程序.org.lwjgl.demo.intro.Intro2" />
+        <item itemvalue="应用程序.Intro2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="4be749d4-e8a0-41c5-b41a-459b21943aae" name="更改" comment="" />
+      <created>1694936005966</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1694936005966</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test8" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test8" />
+  </component>
+</project>
