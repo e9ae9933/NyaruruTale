@@ -59,6 +59,7 @@ public class PixelLinerTextureManager
 	}
 	public FrameAnimator createFrameAnimator(PxlSequence f)
 	{
+		f.getFrameList().forEach(ff->ff.getLayerList().forEach(l->l.getTexture()));
 		return new FrameAnimator(this,f);
 	}
 }

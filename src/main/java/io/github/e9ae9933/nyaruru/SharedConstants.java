@@ -5,17 +5,46 @@ import com.google.gson.GsonBuilder;
 import io.github.e9ae9933.nyaruru.client.ResourceHelper;
 import io.github.e9ae9933.nyaruru.client.renderer.graphics.GraphicsTexture;
 import org.apache.commons.lang3.Validate;
+import org.apache.commons.lang3.tuple.Pair;
 
 import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.awt.image.VolatileImage;
 import java.io.ByteArrayInputStream;
-import java.util.Scanner;
+import java.util.*;
 
 public class SharedConstants
 {
 	private static GraphicsTexture.UniChar[] unifont;
 	private static Font unifontFont;
+	public static boolean debugPixelLinerBoxes=false;
+	public  static boolean debug=false;
 	public static boolean maximumCompatibility=System.getProperties().contains("maximumCompatibility");
+//	public static Map<Pair<Font,Integer>, BufferedImage> volatileTextureFontBuffer=new LinkedHashMap<>();
 	public static int tabWidth=4;
+	public static int fps=60;
+	final static HashSet<VolatileImage> bufferedImages=new HashSet<>();
+	public static VolatileImage requestVolatileBuffer(int w,int h)
+	{
+		synchronized (bufferedImages)
+		{
+			Optional<VolatileImage> opt = bufferedImages.stream()
+					.filter(i -> i.getWidth() ==w&&i.getHeight()==h)
+					.findFirst();
+			return opt.orElseGet(() -> GraphicsEnvironment.
+					getLocalGraphicsEnvironment().
+					getDefaultScreenDevice().
+					getDefaultConfiguration().
+					createCompatibleVolatileImage(w, h,Transparency.TRANSLUCENT));
+		}
+	}
+	public static void returnVolatileBuffer(VolatileImage image)
+	{
+		synchronized (bufferedImages)
+		{
+			bufferedImages.add(image);
+		}
+	}
 	public static Gson gson=new GsonBuilder()
 			.disableHtmlEscaping()
 			.serializeNulls()

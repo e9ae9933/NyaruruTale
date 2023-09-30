@@ -1,21 +1,30 @@
 package io.github.e9ae9933.nyaruru.core;
 
+import io.github.e9ae9933.nyaruru.SharedConstants;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class TickRecorder
 {
 	long last;
-	final Queue<Long> ticks;
+	final Queue<Long> ticks=new LinkedList<>();
 	double lastTickTime;
+	boolean resetLastTickTimeOnOverload=true;
 	public TickRecorder()
 	{
 		this(5000);
 	}
+
+	public TickRecorder(long last,boolean resetLastTickTimeOnOverload)
+	{
+		this.last=last;
+		this.resetLastTickTimeOnOverload = resetLastTickTimeOnOverload;
+	}
+
 	public TickRecorder(long last)
 	{
 		this.last=last;
-		this.ticks=new LinkedList<>();
 	}
 	public void tick()
 	{
@@ -72,22 +81,28 @@ public class TickRecorder
 			wait=lastTickTime+mspt-now;
 			if(wait<0)
 			{
-				System.err.println("Can't keep up! Is the server overloaded? Running %.1fms or %.1f ticks behind".formatted(
-						-wait,
-						-wait/tps
-				));
-				lastTickTime=now;
-				return;
+//				if(SharedConstants.debug)
+				if(-wait>=mspt*5)
+				{
+					System.err.println("Can't keep up! Is the server overloaded? Running %.1fms or %.1f ticks behind".formatted(
+							-wait,
+							-wait / mspt
+					));
+					lastTickTime=now;
+				}
+				if(resetLastTickTimeOnOverload)
+					lastTickTime=now;
 			}
 			lastTickTime+=mspt;
 		}
-		try{
-			Thread.sleep((long) wait);
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
+		if(wait>=0)
+			try{
+				Thread.sleep((long) wait);
+			}
+			catch (Exception e)
+			{
+				e.printStackTrace();
+			}
 	}
 //	public long getNeedSleepUntilTps(double tps)
 //	{

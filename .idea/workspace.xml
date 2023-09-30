@@ -5,67 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4be749d4-e8a0-41c5-b41a-459b21943aae" name="更改" comment="Test8">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/MathHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/SharedConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/ResourceHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/ClientTickInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/Component.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/Frame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/HandleResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/KeyMap.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/Scene.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/Ticker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/swing/SwingFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/FrameAnimator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/PixelLinerTextureManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/SubTextureReference.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/Texture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/gl/GlTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/graphics/GraphicsSubTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/graphics/GraphicsTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/vlt/VolatileTexture.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickRecorder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/NoelByteBuffer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/Pair.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlCharacter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlImage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlImageAtlas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlLayer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlPose.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlSequence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/RectPacking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/RectPackingAtlas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/Settings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fragment_shader.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/noel.pxls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/test.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/unifont-15.1.01.bdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/unifont-15.1.02.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/vertex_shader.shader" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Intro2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test5.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test6Gl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test7.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/DoNothingTexture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickScheduler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/theia/TheiaMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/ut/UndertaleFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/ut/UndertaleScene.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/test/Test9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/MathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/MathHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/SharedConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/SharedConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/ClientTickInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/ClientTickInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/KeyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/KeyMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/swing/SwingFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/swing/SwingFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/FrameAnimator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/FrameAnimator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/PixelLinerTextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/PixelLinerTextureManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/SubTextureReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/SubTextureReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/Texture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/graphics/GraphicsTexture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/graphics/GraphicsTexture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/vlt/VolatileTexture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/vlt/VolatileTexture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickRecorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickRecorder.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,20 +102,7 @@
       <recent name="io.github.e9ae9933.nyaruru.pxlsloader" />
     </key>
   </component>
-  <component name="RunManager" selected="应用程序.Test8">
-    <configuration name="Intro2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.Intro2" />
-      <module name="NyaruruTale.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="应用程序.TheiaMain">
     <configuration name="Test6Gl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Test6Gl" />
       <module name="NyaruruTale.test" />
@@ -198,12 +143,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.lwjgl.demo.intro.Intro2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.lwjgl.demo.intro.Intro2" />
+    <configuration name="Test9" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.Test9" />
       <module name="NyaruruTale.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.lwjgl.demo.intro.*" />
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TheiaMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.github.e9ae9933.nyaruru.theia.TheiaMain" />
+      <module name="NyaruruTale.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.e9ae9933.nyaruru.theia.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -212,19 +170,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="应用程序.Test9" />
+      <item itemvalue="应用程序.TheiaMain" />
       <item itemvalue="应用程序.Test8" />
       <item itemvalue="应用程序.Test7" />
-      <item itemvalue="应用程序.Intro2" />
       <item itemvalue="应用程序.Test6Gl" />
-      <item itemvalue="应用程序.org.lwjgl.demo.intro.Intro2" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.Test9" />
+        <item itemvalue="应用程序.TheiaMain" />
         <item itemvalue="应用程序.Test8" />
         <item itemvalue="应用程序.Test7" />
         <item itemvalue="应用程序.Test6Gl" />
-        <item itemvalue="应用程序.org.lwjgl.demo.intro.Intro2" />
-        <item itemvalue="应用程序.Intro2" />
       </list>
     </recent_temporary>
   </component>
@@ -237,10 +195,26 @@
       <option name="presentableId" value="Default" />
       <updated>1694936005966</updated>
     </task>
+    <task id="LOCAL-00001" summary="Test8">
+      <option name="closed" value="true" />
+      <created>1695982121386</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695982121386</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test8" />
     <option name="LAST_COMMIT_MESSAGE" value="Test8" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="buttonAnimator[0].position" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

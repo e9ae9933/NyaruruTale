@@ -54,7 +54,7 @@ public class SwingFrame extends io.github.e9ae9933.nyaruru.client.core.Frame
 				running.getAndSet(true);
 				try
 				{
-					this.grabFocus();
+//					this.grabFocus();
 					super.paint(g);
 					int w = this.getWidth();
 					int h = this.getWidth();
@@ -111,7 +111,7 @@ public class SwingFrame extends io.github.e9ae9933.nyaruru.client.core.Frame
 			@Override
 			public void keyTyped(KeyEvent e)
 			{
-				System.err.println(e.paramString());
+//				System.err.println(e.paramString());
 				synchronized (keys)
 				{
 //					keys.computeIfAbsent(e.getKeyCode(), (a) -> 0);
@@ -122,7 +122,7 @@ public class SwingFrame extends io.github.e9ae9933.nyaruru.client.core.Frame
 			@Override
 			public void keyPressed(KeyEvent e)
 			{
-				System.err.println(e.paramString());
+//				System.err.println(e.paramString());
 				synchronized (keys)
 				{
 //					keys.computeIfAbsent(e.getKeyCode(), (a) -> 0);
@@ -133,7 +133,7 @@ public class SwingFrame extends io.github.e9ae9933.nyaruru.client.core.Frame
 			@Override
 			public void keyReleased(KeyEvent e)
 			{
-				System.err.println(e.paramString());
+//				System.err.println(e.paramString());
 				synchronized (keys)
 				{
 					keys.remove(e.getKeyCode());

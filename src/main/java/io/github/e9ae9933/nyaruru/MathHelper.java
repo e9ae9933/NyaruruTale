@@ -23,6 +23,10 @@ public class MathHelper
 	{
 		return x<l?l:x>r?r:x;
 	}
+	public static double clamp(double x,double l,double r)
+	{
+		return x<l?l:x>r?r:x;
+	}
 	public static short round255(float f)
 	{
 		return (short)clamp((int) (f+0.5f),0,255);
@@ -50,6 +54,10 @@ public class MathHelper
 	public static int floorMod(int x,int y)
 	{
 		return Math.floorMod(x,y);
+	}
+	public static double ratio(double rate,double l,double r)
+	{
+		return (clamp(rate,0,1)*(r-l)+l);
 	}
 	public static int rangeIncrease(int x,int high)
 	{

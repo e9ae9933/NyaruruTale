@@ -25,6 +25,7 @@ public abstract class Texture
 		drawLine(x+w,y,x+w,y+h,c,width);
 	}
 	public abstract void drawString(String str, int x, int y, int size, int xdis, int ydis, Color c);
+	public abstract void drawScaledString(String str,int x,int y,Font font,int xdis,int ydis,Color c,int scale);
 
 	//	public abstract void drawChar(int codePoint,int x,int y);
 	public abstract int charWidth(int codePoint);

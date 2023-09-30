@@ -34,6 +34,15 @@ public class KeyMap extends LinkedHashMap<Integer,Integer>
 	{
 		return this.getOrDefault(key,-1)==0;
 	}
+
+	public boolean isFirstPressedAndRemove(int key)
+	{
+		Integer i=this.get(key);
+		if(i==null)
+			return false;
+		this.remove(key);
+		return i==0;
+	}
 	public boolean isPressed(int key)
 	{
 		return this.containsKey(key);

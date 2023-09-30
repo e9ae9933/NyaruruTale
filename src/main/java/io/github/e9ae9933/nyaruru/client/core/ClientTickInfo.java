@@ -1,5 +1,6 @@
 package io.github.e9ae9933.nyaruru.client.core;
 
+import io.github.e9ae9933.nyaruru.client.renderer.PixelLinerTextureManager;
 import io.github.e9ae9933.nyaruru.client.renderer.Texture;
 
 import java.awt.event.KeyEvent;
@@ -16,6 +17,7 @@ public class ClientTickInfo
 	public int mouseX;
 	public int mouseY;
 	public boolean mouseClicking;
+	public PixelLinerTextureManager textureManager;
 	public ClientTickInfo(){}
 
 	public ClientTickInfo(Texture texture, int renderWidth, int renderHeight, KeyMap keyPressed, boolean mouseInBounds, int mouseX, int mouseY, boolean mouseClicking)

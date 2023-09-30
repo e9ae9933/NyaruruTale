@@ -182,6 +182,12 @@ public class GraphicsTexture extends Texture
 	}
 
 	@Override
+	public void drawScaledString(String str, int x, int y, Font font, int xdis, int ydis, Color c, int scale)
+	{
+
+	}
+
+	@Override
 	public int charWidth(int codePoint)
 	{
 		if(fontPage.length<=codePoint)return -1;
