@@ -1,5 +1,15 @@
 package io.github.e9ae9933.nyaruru.pxlsloader;
 
+import com.google.gson.FieldNamingPolicy;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.TypeAdapter;
+import com.google.gson.internal.bind.TypeAdapters;
+import com.google.gson.stream.JsonReader;
+import com.google.gson.stream.JsonWriter;
+
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
 
@@ -111,6 +121,62 @@ public class Utils
 			throw new RuntimeException(e);
 		}
 	}
+	public static byte[] chooseFileAndGetAllBytes(FileFilter f)
+	{
+		JFileChooser c=new JFileChooser();
+		c.setFileSelectionMode(JFileChooser.FILES_ONLY);
+		c.setMultiSelectionEnabled(false);
+		c.setFileFilter(f);
+		int rt=c.showDialog(null,null);
+		if(rt!=0) throw new RuntimeException("User cancelled choosing");
+		try(FileInputStream is=new FileInputStream(c.getSelectedFile()))
+		{
+			return is.readAllBytes();
+		}
+		catch (Exception e)
+		{
+			throw new RuntimeException(e);
+		}
+	}
+	public static Gson gson=new GsonBuilder().registerTypeAdapterFactory(TypeAdapters.newFactory(Class.class, new TypeAdapter<Class>()
+	{
+		@Override
+		public void write(JsonWriter out, Class value) throws IOException
+		{
+			if(value==null)
+				out.nullValue();
+			else
+				out.value(value.getName());
+		}
+
+		@Override
+		public Class read(JsonReader in) throws IOException
+		{
+			try
+			{
+				return Class.forName(in.nextString());
+			} catch (ClassNotFoundException e)
+			{
+				throw new IOException(e);
+			}
+		}
+	})).registerTypeHierarchyAdapter(File.class,new TypeAdapter<File>()
+	{
+		@Override
+		public void write(JsonWriter out, File value) throws IOException
+		{
+			if(value==null)
+				out.nullValue();
+			else
+				out.value(value.getPath());
+		}
+
+		@Override
+		public File read(JsonReader in) throws IOException
+		{
+			return new File(in.nextString());
+		}
+	}).setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)/*.serializeNulls()*/.setPrettyPrinting().serializeSpecialFloatingPointValues().disableHtmlEscaping().create();
 	@FunctionalInterface
 	public interface SupplierWithExceptions<T>
 	{

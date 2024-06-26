@@ -3,6 +3,7 @@ package io.github.e9ae9933.nyaruru.client.renderer;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
+import java.util.function.IntFunction;
 
 public class SubTextureReference extends Texture
 {
@@ -68,7 +69,7 @@ public class SubTextureReference extends Texture
 	}
 
 	@Override
-	public void drawLine(int x1, int y1, int x2, int y2, Color c, int w)
+	public void drawLine(double x1, double y1, double x2, double y2, Color c, double w)
 	{
 		delegate.drawLine(px+x1,py+y1,px+x2,py+y2,c,w);
 	}
@@ -80,15 +81,21 @@ public class SubTextureReference extends Texture
 	}
 
 	@Override
-	public void drawString(String str, int x, int y, int size, int xdis, int ydis, Color c)
+	public void drawString(String str, int x, int y, int size, Color c)
 	{
-		delegate.drawString(str,px+x,py+y,size,xdis,ydis,c);
+		delegate.drawString(str,px+x,py+y,size, c);
 	}
 
 	@Override
 	public void drawScaledString(String str, int x, int y, Font font, int xdis, int ydis, Color c, int scale)
 	{
+		delegate.drawScaledString(str,px+x,py+y,font,xdis,ydis,c,scale);
+	}
 
+	@Override
+	public void drawScaledString(String str, int x, int y, IntFunction<Font> font, int size, int xdis, int ydis, Color c, int scale)
+	{
+		delegate.drawScaledString(str,px+x,py+y,font,size,xdis,ydis,c,scale);
 	}
 
 	@Override

@@ -81,15 +81,6 @@ public class TickRecorder
 			wait=lastTickTime+mspt-now;
 			if(wait<0)
 			{
-//				if(SharedConstants.debug)
-				if(-wait>=mspt*5)
-				{
-					System.err.println("Can't keep up! Is the server overloaded? Running %.1fms or %.1f ticks behind".formatted(
-							-wait,
-							-wait / mspt
-					));
-					lastTickTime=now;
-				}
 				if(resetLastTickTimeOnOverload)
 					lastTickTime=now;
 			}

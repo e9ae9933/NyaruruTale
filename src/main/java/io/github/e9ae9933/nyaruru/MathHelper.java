@@ -10,6 +10,7 @@ import java.util.stream.Collectors;
 
 public class MathHelper
 {
+	public static final Random rand=new Random(114514);
 	public static final double PI=Math.PI;
 	public static int round(double f)
 	{
@@ -18,6 +19,16 @@ public class MathHelper
 	public static int floor(double f)
 	{
 		return (int)Math.floor(f);
+	}
+	public static int ceil(double f)
+	{
+		return (int) Math.ceil(f);
+	}
+	public static int collapse(double f)
+	{
+		int base=floor(f);
+		double extra=f-base;
+		return base+(rand.nextDouble()<extra?1:0);
 	}
 	public static int clamp(int x,int l,int r)
 	{
@@ -31,7 +42,7 @@ public class MathHelper
 	{
 		return (short)clamp((int) (f+0.5f),0,255);
 	}
-	public static double distance(int x1,int y1,int x2,int y2)
+	public static double distance(double x1, double y1, double x2, double y2)
 	{
 		return Math.sqrt((x1-x2)*1l*(x1-x2)+(y1-y2)*1l*(y1-y2));
 	}
@@ -47,6 +58,10 @@ public class MathHelper
 	{
 		return Math.tan(x);
 	}
+	public static double sqrt(double x)
+	{
+		return Math.sqrt(x);
+	}
 	public static double atan2xy(double x,double y)
 	{
 		return Math.atan2(y,x);
@@ -58,6 +73,10 @@ public class MathHelper
 	public static double ratio(double rate,double l,double r)
 	{
 		return (clamp(rate,0,1)*(r-l)+l);
+	}
+	public static int ratioRound(double rate,double l,double r)
+	{
+		return round(clamp(rate,0,1)*(r-l)+l);
 	}
 	public static int rangeIncrease(int x,int high)
 	{

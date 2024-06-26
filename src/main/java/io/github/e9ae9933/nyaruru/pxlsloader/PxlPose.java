@@ -13,7 +13,7 @@ public class PxlPose
 	String endJumpTitle;
 	String[] aliasTo;
 	String comment;
-	transient PxlSequence[] sequences;
+	PxlSequence[] sequences;
 	byte useless;
 	transient PxlCharacter fa;
 	PxlPose(NoelByteBuffer b,Settings s,PxlCharacter fa)
@@ -112,4 +112,5 @@ public class PxlPose
 	{
 		return fa;
 	}
+
 }

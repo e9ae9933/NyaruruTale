@@ -100,4 +100,15 @@ public class PxlCharacter
 	{
 		return poses.length;
 	}
+	public void printDir(StringBuilder sb)
+	{
+		sb.append("Character\n");
+		for(int i=0;i<poses.length;i++)
+		{
+			sb.append("\tPose ").append(i)
+					.append(": ").append(poses[i].title)
+					.append("(").append(poses[i].sequences.length)
+					.append(")\n");
+		}
+	}
 }

@@ -3,21 +3,21 @@ package io.github.e9ae9933.nyaruru.client.renderer.vlt;
 import io.github.e9ae9933.nyaruru.SharedConstants;
 import io.github.e9ae9933.nyaruru.client.renderer.SubTextureReference;
 import io.github.e9ae9933.nyaruru.client.renderer.Texture;
-import org.apache.commons.lang3.Validate;
-import org.apache.commons.lang3.tuple.ImmutablePair;
+import static io.github.e9ae9933.nyaruru.MathHelper.*;
 
 import java.awt.*;
-import java.awt.font.TextAttribute;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.awt.image.VolatileImage;
-import java.text.AttributedString;
 import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.IntFunction;
 
 public class VolatileTexture extends Texture
 {
 	VolatileImage delegate;
+	int width;
+	int height;
 	Graphics2D g;
 	public VolatileTexture()
 	{
@@ -26,13 +26,13 @@ public class VolatileTexture extends Texture
 	@Override
 	public int getWidth()
 	{
-		return delegate.getWidth();
+		return width;
 	}
 
 	@Override
 	public int getHeight()
 	{
-		return delegate.getHeight();
+		return height;
 	}
 
 	@Override
@@ -45,35 +45,30 @@ public class VolatileTexture extends Texture
 	@Override
 	public void createFrom(BufferedImage image)
 	{
-		delegate=image
-				.createGraphics()
-				.getDeviceConfiguration()
-				.createCompatibleVolatileImage(image.getWidth(),image.getHeight(),Transparency.TRANSLUCENT);
+		width=image.getWidth();
+		height=image.getHeight();
+		delegate=SharedConstants.requestVolatileBuffer2(image.getWidth(),image.getHeight());
 		g=delegate.createGraphics();
 		loadTips();
-//		createNew(image.getWidth(),image.getHeight());
 		g.setBackground(new Color(0x00000000,true));
 		g.clearRect(0,0,image.getWidth(),image.getHeight());
 		g.drawImage(image,0,0,null);
 		g.setFont(SharedConstants.getUnifontFont());
+		clip();
 	}
 
 	@Override
 	public void createNew(int width, int height)
 	{
-//		System.out.println(GraphicsEnvironment.getLocalGraphicsEnvironment()
-//				.getDefaultScreenDevice()
-//				.getDefaultConfiguration()
-//				.isTranslucencyCapable());
-		delegate=GraphicsEnvironment.getLocalGraphicsEnvironment()
-				.getDefaultScreenDevice()
-				.getDefaultConfiguration()
-				.createCompatibleVolatileImage(width,height,Transparency.TRANSLUCENT);
+		this.width=width;
+		this.height=height;
+		delegate=SharedConstants.requestVolatileBuffer2(width,height);
 		g=delegate.createGraphics();
 		loadTips();
 		g.setBackground(new Color(0x00000000,true));
 		g.clearRect(0,0,width,height);
 		g.setFont(SharedConstants.getUnifontFont());
+		clip();
 	}
 	void loadTips()
 	{
@@ -85,14 +80,24 @@ public class VolatileTexture extends Texture
 	@Override
 	public BufferedImage toBufferedImage()
 	{
-		throw new UnsupportedOperationException("use toImage instead");
+//		validate();
+		throw new UnsupportedOperationException();
 //		return delegate.getSnapshot();
 	}
 
 	@Override
 	public Image toImage()
 	{
+//		validate();
+		clip();
 		return delegate;
+	}
+	void clip()
+	{
+		int realW=delegate.getWidth(),realH=delegate.getHeight();
+		g.setBackground(new Color(0,true));
+		g.fillRect(width,0,realW-width,realH);
+		g.fillRect(0,height,width,realH-height);
 	}
 
 	@Override
@@ -103,11 +108,11 @@ public class VolatileTexture extends Texture
 	}
 
 	@Override
-	public void drawLine(int x1, int y1, int x2, int y2, Color c, int w)
+	public void drawLine(double x1, double y1, double x2, double y2, Color c, double w)
 	{
-		g.setStroke(new BasicStroke(w));
+		g.setStroke(new BasicStroke((float)w,BasicStroke.CAP_BUTT,BasicStroke.JOIN_MITER));
 		g.setColor(c);
-		g.drawLine(x1, y1, x2, y2);
+		g.drawLine(round(x1), round(y1), round(x2), round(y2));
 	}
 
 	@Override
@@ -118,38 +123,51 @@ public class VolatileTexture extends Texture
 	}
 
 	@Override
-	public void drawString(String str, int x, int y, int size, int xdis, int ydis, Color c)
+	public void drawString(String str, int x, int y, int size, Color c)
 	{
-		g.setFont(SharedConstants.getUnifontFont());
-//		g.setFont(g.getFont().deriveFont((float)size));
 		g.setColor(c);
-//		Validate.notBlank(str);
-		AtomicInteger dy= new AtomicInteger(y);
-		Arrays.stream(str.replace("\t"," ".repeat(SharedConstants.tabWidth)).split("\n"))
-				.forEachOrdered(s->{
-					AtomicInteger dx= new AtomicInteger(x);
-					s.codePoints()
-							.forEach(i->{
-								dx.addAndGet(drawChar(i, dx.get(), dy.get(), size, c)+xdis);
-							});
-					dy.addAndGet(ydis+size);
-				});
+		g.setFont(SharedConstants.getUnifontFont().deriveFont((float)size));
+		FontMetrics metrics=g.getFontMetrics();
+		int ascent=metrics.getAscent();
+//		g.drawString(str,x,y+ascent);
+		String[] split = str.replace("\t", " ".repeat(SharedConstants.tabWidth)).split("\n");
+//		StopWatch sw=StopWatch.createStarted();
+		for(int i=0;i<split.length;i++)
+			if(y+(size)*i<getHeight())
+				g.drawString(split[i],x,y+ascent+(size)*i);
+//		System.out.println(sw.getTime());
 	}
 
 	@Override
 	public void drawScaledString(String str, int x, int y, Font font, int xdis, int ydis, Color c, int scale)
 	{
 		int size=font.getSize();
-		g.setFont(font);
-//		g.setFont(g.getFont().deriveFont((float)size));
+		drawScaledString(str,x,y,cp->font,size,xdis,ydis,c,scale);
+//		int size=font.getSize();
+//		g.setFont(font);
+//		g.setColor(c);
+//		AtomicInteger dy= new AtomicInteger(y+0);
+//		Arrays.stream(str.replace("\t"," ".repeat(SharedConstants.tabWidth)).split("\n"))
+//				.forEach(s->{
+//					AtomicInteger dx= new AtomicInteger(x);
+//					s.codePoints()
+//							.forEach(i->{
+//								dx.addAndGet(drawFontedScaledChar(i, dx.get(), dy.get(), scale, c)+xdis);
+//							});
+//					dy.addAndGet(ydis+size*scale);
+//				});
+	}
+	@Override
+	public void drawScaledString(String str, int x, int y, IntFunction<Font> font,int size, int xdis, int ydis, Color c, int scale)
+	{
 		g.setColor(c);
-//		Validate.notBlank(str);
-		AtomicInteger dy= new AtomicInteger(y);
+		AtomicInteger dy= new AtomicInteger(y+0);
 		Arrays.stream(str.replace("\t"," ".repeat(SharedConstants.tabWidth)).split("\n"))
 				.forEach(s->{
 					AtomicInteger dx= new AtomicInteger(x);
 					s.codePoints()
 							.forEach(i->{
+								g.setFont(font.apply(i).deriveFont((float)size));
 								dx.addAndGet(drawFontedScaledChar(i, dx.get(), dy.get(), scale, c)+xdis);
 							});
 					dy.addAndGet(ydis+size*scale);
@@ -164,10 +182,12 @@ public class VolatileTexture extends Texture
 
 	protected int drawFontedScaledChar(int codePoint,int x,int y,int scale,Color c)
 	{
+		String target="%c".formatted(codePoint);
 		int w=g.getFontMetrics().charWidth(codePoint);
 		int h=g.getFontMetrics().getHeight();
-		VolatileImage image=SharedConstants.requestVolatileBuffer(w,h);
+		VolatileImage image=SharedConstants.requestVolatileBuffer2(w,h);
 		Graphics2D g2d=image.createGraphics();
+		g2d.setFont(g.getFont());
 		g2d.setBackground(new Color(0,true));
 		g2d.setColor(c);
 		g2d.clearRect(0,0,w,h);
@@ -233,5 +253,67 @@ public class VolatileTexture extends Texture
 	public SubTextureReference getSubImageReference(int x, int y, int w, int h, boolean allowOutOfBoundsRendering)
 	{
 		return new SubTextureReference(this,x,y,w,h,allowOutOfBoundsRendering);
+	}
+	public void validate()
+	{
+//		if(true)
+//			throw new RuntimeException();
+		int rt=delegate.validate(GraphicsEnvironment.
+				getLocalGraphicsEnvironment().
+				getDefaultScreenDevice().
+				getDefaultConfiguration());
+		try
+		{
+			if (rt != VolatileImage.IMAGE_OK)
+				throw new RuntimeException("Validate failed: returned %d".formatted(rt));
+			if (delegate.contentsLost())
+				throw new RuntimeException("Contents lost");
+		}
+		catch (Exception e)
+		{
+			System.err.println(e.getMessage());
+//			e.printStackTrace();
+		}
+	}
+	boolean finalized=false;
+	@Override
+	public void end()
+	{
+		if(!finalized)
+		{
+			finalized = true;
+			SharedConstants.returnVolatileBuffer(delegate);
+			delegate=null;
+			g=null;
+		}
+	}
+
+	@Override
+	@SuppressWarnings({""})
+	protected void finalize() throws Throwable
+	{
+		if(!finalized&&!SharedConstants.ALLOW_UNSAFE_BEHAVIORS)
+		{
+			try{
+				Thread dummy=new Thread(()->{});
+				Runtime.getRuntime().addShutdownHook(dummy);
+				Runtime.getRuntime().removeShutdownHook(dummy);
+			}
+			catch (Exception e)
+			{
+				return;
+			}
+			Exception e=new IllegalStateException("UNHANDLED FINALIZE");
+			e.printStackTrace();
+			Thread.getAllStackTraces().keySet().forEach(
+					t->
+					{
+						if (t != Thread.currentThread())
+							t.interrupt();
+					}
+			);
+			SharedConstants.showErrorDialog(e);
+			System.exit(SharedConstants.IMAGE_LEAK);
+		}
 	}
 }

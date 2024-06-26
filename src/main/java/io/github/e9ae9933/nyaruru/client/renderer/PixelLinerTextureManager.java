@@ -29,6 +29,20 @@ public class PixelLinerTextureManager
 //
 //		}
 //	}
+	public PxlCharacter getCharacterByBinary(byte[] b)
+	{
+		synchronized (cache)
+		{
+			PxlCharacter pc=cache.get("temp");
+			if(pc!=null)
+				return pc;
+			cache.put("temp",pc=new PxlCharacter(
+					b,
+					this
+			));
+			return pc;
+		}
+	}
 	public PxlCharacter getCharacterByName(String s)
 	{
 		synchronized (cache)
@@ -51,7 +65,6 @@ public class PixelLinerTextureManager
 			{
 				Texture t = creator.get();
 				t.createFrom(layer.getImage());
-//				System.out.println("create texture");
 				cachedTextures.put(layer, t);
 			}
 			return cachedTextures.get(layer);

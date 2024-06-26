@@ -8,7 +8,7 @@ public class PxlFrame
 	int crf60=10;
 	String name="";
 	byte vers;
-	transient PxlLayer[] layers;
+	PxlLayer[] layers;
 	transient PxlSequence fa;
 	PxlFrame(NoelByteBuffer base,Settings s,PxlSequence fa)
 	{

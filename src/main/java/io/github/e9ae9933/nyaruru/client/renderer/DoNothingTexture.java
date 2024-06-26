@@ -1,10 +1,9 @@
 package io.github.e9ae9933.nyaruru.client.renderer;
 
-import io.github.e9ae9933.nyaruru.client.renderer.vlt.VolatileTexture;
-
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
+import java.util.function.IntFunction;
 
 public class DoNothingTexture extends Texture
 {
@@ -30,7 +29,7 @@ public class DoNothingTexture extends Texture
 	@Override
 	public Color getRGB(int x, int y)
 	{
-		return new Color(0,true);
+		throw new UnsupportedOperationException("no get rgb");
 	}
 
 	@Override
@@ -48,7 +47,7 @@ public class DoNothingTexture extends Texture
 	@Override
 	public BufferedImage toBufferedImage()
 	{
-		return new BufferedImage(1,1,BufferedImage.TYPE_INT_ARGB);
+		throw new UnsupportedOperationException("that's just NOTHING.");
 	}
 
 	@Override
@@ -64,7 +63,7 @@ public class DoNothingTexture extends Texture
 	}
 
 	@Override
-	public void drawLine(int x1, int y1, int x2, int y2, Color c, int w)
+	public void drawLine(double x1, double y1, double x2, double y2, Color c, double w)
 	{
 //		super.drawLine(x1, y1, x2, y2, c, w);
 	}
@@ -76,7 +75,7 @@ public class DoNothingTexture extends Texture
 	}
 
 	@Override
-	public void drawString(String str, int x, int y, int size, int xdis, int ydis, Color c)
+	public void drawString(String str, int x, int y, int size, Color c)
 	{
 //		super.drawString(str, x, y, size, xdis, ydis, c);
 	}
@@ -85,6 +84,12 @@ public class DoNothingTexture extends Texture
 	public void drawScaledString(String str, int x, int y, Font font, int xdis, int ydis, Color c, int scale)
 	{
 //		super.drawScaledString(str, x, y, font, xdis, ydis, c, scale);
+	}
+
+	@Override
+	public void drawScaledString(String str, int x, int y, IntFunction<Font> font, int size, int xdis, int ydis, Color c, int scale)
+	{
+
 	}
 
 	@Override

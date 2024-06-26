@@ -10,8 +10,8 @@ import java.util.function.Supplier;
 
 public class PxlLayer
 {
-	transient int id;
-	transient double id2;
+	int id;
+	double id2;
 	byte type=0;
 	String name="";
 	short alpha=10000;
@@ -22,7 +22,7 @@ public class PxlLayer
 	int useless1;
 	byte useless2,useless3;
 	transient BufferedImage image;
-	transient boolean isImport=false;
+	boolean isImport=false;
 	transient PxlFrame fa;
 	transient PixelLinerTextureManager creator;
 	transient Map<Pair<Integer, Double>, Pair<PxlImageAtlas, PxlImageAtlas.Uv>> idMap;

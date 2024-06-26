@@ -8,6 +8,8 @@ import io.github.e9ae9933.nyaruru.pxlsloader.PxlSequence;
 import java.awt.*;
 import java.awt.geom.AffineTransform;
 import java.awt.geom.Point2D;
+import java.util.List;
+import java.util.stream.IntStream;
 
 public class FrameAnimator
 {
@@ -23,15 +25,15 @@ public class FrameAnimator
 		this.position=0;
 		this.stepped=0;
 	}
-	public void renderTo(Texture target,int x,int y,double theta)
+	public void renderTo(Texture target,double x,double y,double theta)
 	{
 		renderTo(target,x,y,theta,0+1,0+1);
 	}
-	public void renderTo(Texture target,int x,int y,double theta,double scaleX,double scaleY)
+	public void renderTo(Texture target,double x,double y,double theta,double scaleX,double scaleY)
 	{
 		renderTo(target, x, y, theta,scaleX,scaleY,1);
 	}
-	public void renderTo(Texture target,int x,int y,double theta,double scaleX,double scaleY,float transparency)
+	public void renderTo(Texture target,double x,double y,double theta,double scaleX,double scaleY,float transparency)
 	{
 //		System.out.println(sequence.getWidth()+" "+sequence.getHeight());
 		PxlFrame f=sequence.getFrame(position);
@@ -102,6 +104,14 @@ public class FrameAnimator
 			position = sequence.getLoopTo();
 			loopedCount++;
 		}
+	}
+	public void changeFrame(String s)
+	{
+		stepped=0;
+		List<PxlFrame> fs=sequence.getFrameList();
+		position = IntStream.range(0, fs.size())
+				.filter(i -> fs.get(i).getName().equalsIgnoreCase(s))
+				.findFirst().orElseThrow();
 	}
 	public void renderAndStep(Texture target,int x,int y,double theta)
 	{

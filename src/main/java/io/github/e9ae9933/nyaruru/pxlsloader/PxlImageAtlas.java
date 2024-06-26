@@ -1,6 +1,8 @@
 package io.github.e9ae9933.nyaruru.pxlsloader;
 
 import javax.imageio.ImageIO;
+import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.*;
@@ -27,7 +29,7 @@ public class PxlImageAtlas
 		}
 	}
 	Uv[] pos;
-	BufferedImage image;
+	transient BufferedImage image;
 	PxlImageAtlas(NoelByteBuffer b,Settings s,int id)
 	{
 		int type=b.getByte()-22;
@@ -54,7 +56,36 @@ public class PxlImageAtlas
 			}
 			if (num == 1)
 			{
-				throw new RuntimeException("No load from png allowed.");
+				int w=b.getInt();
+				int h=b.getInt();
+				JOptionPane.showMessageDialog(null,"这个文件是 png 分离形式。\n请指定读取的图片: %dx%d".formatted(w,h),null,JOptionPane.INFORMATION_MESSAGE);
+				byte[] png=Utils.chooseFileAndGetAllBytes(new FileFilter()
+				{
+					@Override
+					public boolean accept(File f)
+					{
+						return f.isDirectory()||f.getName().toLowerCase().endsWith(".png");
+					}
+
+					@Override
+					public String getDescription()
+					{
+						return ".png";
+					}
+				});
+				try
+				{
+					image = ImageIO.read(new ByteArrayInputStream(png));
+				}
+				catch (Exception e)
+				{
+					throw new IllegalArgumentException(e);
+				}
+				if(image.getWidth()!=w||image.getHeight()!=h)
+				{
+					JOptionPane.showMessageDialog(null,"期望的分辨率: %dx%d\n图片的分辨率: %dx%d\n将尝试强行继续执行。\n这很可能导致错误产生。",null,JOptionPane.WARNING_MESSAGE);
+				}
+//				throw new RuntimeException("No load from png allowed.");
 			} else
 			{
 				NoelByteBuffer img = b.getSegment();

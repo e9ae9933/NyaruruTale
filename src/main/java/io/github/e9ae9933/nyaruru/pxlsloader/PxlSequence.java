@@ -14,7 +14,7 @@ public class PxlSequence
 	int loopTo;
 	String[] frameSnd;
 	int aim;
-	transient PxlFrame[] frames;
+	PxlFrame[] frames;
 	byte useless;
 	transient PxlPose fa;
 	transient PixelLinerTextureManager creator;
