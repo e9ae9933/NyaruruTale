@@ -75,8 +75,14 @@ public class PxlCharacter
 					}
 					break;
 				}
+				case "%PTCL_SECTION%":
+				{
+					NoelByteBuffer target=b.getSegment();
+					Utils.warning("以来丢弃 %d 字节的 PTCL_SECTION 颜色数据。\n这将会造成数据丢失。".formatted(target.size()));
+					break;
+				}
 				default:
-					throw new IllegalArgumentException("invalid section header");
+					throw new IllegalArgumentException("invalid section header "+op);
 			}
 		}
 		b.end();

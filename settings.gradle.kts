@@ -1,2 +1,2 @@
-rootProject.name = "NyaruruTale"
+rootProject.name = "NyaruruTale-PixelPreviewerBranch"
 

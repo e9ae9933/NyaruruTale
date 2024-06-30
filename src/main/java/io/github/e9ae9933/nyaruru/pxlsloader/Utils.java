@@ -121,14 +121,16 @@ public class Utils
 			throw new RuntimeException(e);
 		}
 	}
+	public static File directory=new File(".");
 	public static byte[] chooseFileAndGetAllBytes(FileFilter f)
 	{
-		JFileChooser c=new JFileChooser();
+		JFileChooser c=new JFileChooser(directory);
 		c.setFileSelectionMode(JFileChooser.FILES_ONLY);
 		c.setMultiSelectionEnabled(false);
 		c.setFileFilter(f);
 		int rt=c.showDialog(null,null);
-		if(rt!=0) throw new RuntimeException("User cancelled choosing");
+		if(rt!=0) throw new RuntimeException("User cancelled file choosing");
+		directory=c.getCurrentDirectory();
 		try(FileInputStream is=new FileInputStream(c.getSelectedFile()))
 		{
 			return is.readAllBytes();
@@ -137,6 +139,29 @@ public class Utils
 		{
 			throw new RuntimeException(e);
 		}
+	}
+	public static File chooseDirectory()
+	{
+		JFileChooser c=new JFileChooser(directory);
+		c.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		c.setMultiSelectionEnabled(false);
+//		c.setFileFilter(f);
+		int rt=c.showDialog(null,null);
+		if(rt!=0) throw new RuntimeException("User cancelled file choosing");
+		directory=c.getCurrentDirectory();
+		return c.getSelectedFile();
+	}
+	public static void info(String msg)
+	{
+		JOptionPane.showMessageDialog(null,msg,null,JOptionPane.INFORMATION_MESSAGE);
+	}
+	public static void warning(String msg)
+	{
+		JOptionPane.showMessageDialog(null,msg,null,JOptionPane.WARNING_MESSAGE);
+	}
+	public static void fatal(String msg)
+	{
+		JOptionPane.showMessageDialog(null,msg,null,JOptionPane.ERROR_MESSAGE);
 	}
 	public static Gson gson=new GsonBuilder().registerTypeAdapterFactory(TypeAdapters.newFactory(Class.class, new TypeAdapter<Class>()
 	{

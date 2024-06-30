@@ -58,7 +58,7 @@ public class PxlImageAtlas
 			{
 				int w=b.getInt();
 				int h=b.getInt();
-				JOptionPane.showMessageDialog(null,"这个文件是 png 分离形式。\n请指定读取的图片: %dx%d".formatted(w,h),null,JOptionPane.INFORMATION_MESSAGE);
+				JOptionPane.showMessageDialog(null,"这个文件是 png 分离形式。\n请指定读取的图片: %dx%d\n如果有多个对应图片，请每次都选择末尾有 0 字样的。".formatted(w,h),null,JOptionPane.INFORMATION_MESSAGE);
 				byte[] png=Utils.chooseFileAndGetAllBytes(new FileFilter()
 				{
 					@Override
@@ -83,7 +83,7 @@ public class PxlImageAtlas
 				}
 				if(image.getWidth()!=w||image.getHeight()!=h)
 				{
-					JOptionPane.showMessageDialog(null,"期望的分辨率: %dx%d\n图片的分辨率: %dx%d\n将尝试强行继续执行。\n这很可能导致错误产生。",null,JOptionPane.WARNING_MESSAGE);
+					JOptionPane.showMessageDialog(null,"期望的分辨率: %dx%d\n图片的分辨率: %dx%d\npxls 描述文件与图片不一致，这可能导致错误产生。",null,JOptionPane.WARNING_MESSAGE);
 				}
 //				throw new RuntimeException("No load from png allowed.");
 			} else

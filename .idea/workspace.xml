@@ -4,58 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4be749d4-e8a0-41c5-b41a-459b21943aae" name="更改" comment="Testtheia">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/AudioHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/ContinuedConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/OnceConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/SequencedContinuedConsumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="4be749d4-e8a0-41c5-b41a-459b21943aae" name="更改" comment="clear">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/MathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/MathHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/SharedConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/SharedConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/ResourceHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/ResourceHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/ClientTickInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/ClientTickInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/KeyMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/KeyMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/swing/SwingFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/core/swing/SwingFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/DoNothingTexture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/DoNothingTexture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/FrameAnimator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/FrameAnimator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/PixelLinerTextureManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/PixelLinerTextureManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/SubTextureReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/SubTextureReference.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/Texture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/Texture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/gl/GlTexture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/graphics/GraphicsSubTexture.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/graphics/GraphicsTexture.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/aic/Test8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/aic/Test8.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/vlt/VolatileTexture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/client/renderer/vlt/VolatileTexture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickRecorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickRecorder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickScheduler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/core/TickScheduler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlCharacter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlImageAtlas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlImageAtlas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlPose.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlPose.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlSequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/PxlSequence.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/pxlsloader/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/theia/TheiaMain.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/ut/UndertaleFrame.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/ut/UndertaleScene.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fragment_shader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/noel.pxls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/test.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/vertex_shader.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Intro2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test6Gl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test8.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/e9ae9933/nyaruru/aic/Test8.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/test/Test9.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,16 +34,22 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NyaruruTale" type="f1a62948:ProjectNode" />
+                <item name="NyaruruTale-PixelPreviewerBranch" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NyaruruTale" type="f1a62948:ProjectNode" />
+                <item name="NyaruruTale-PixelPreviewerBranch" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="NyaruruTale" type="f1a62948:ProjectNode" />
+                <item name="NyaruruTale-PixelPreviewerBranch" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="NyaruruTale-PixelPreviewerBranch" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="shadow" type="c8890929:TasksNode$1" />
               </path>
@@ -112,6 +74,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "e9ae9933"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/e9ae9933/NyaruruTale.git",
+    "accountId": "aefe70fe-c8e2-468e-b85e-ef96eef09c54"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
 }</component>
@@ -123,26 +97,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.NyaruruTale [:Test8.main()].executor": "Run",
-    "Gradle.NyaruruTale [:TheiaMain.main()].executor": "Run",
-    "Gradle.NyaruruTale [shadowJar].executor": "Run",
-    "Gradle.PixelPreviewer [:Test8.main()].executor": "Run",
-    "Gradle.升级 Gradle 包装器.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Windowsredstone/IdeaProjects/PixelPreviewer",
-    "onboarding.tips.debug.path": "C:/Users/Windowsredstone/IdeaProjects/NyaruruTale/src/main/java/io/github/e9ae9933/nyaruru/Main.java",
-    "project.structure.last.edited": "模块",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.NyaruruTale [:Test8.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NyaruruTale [:TheiaMain.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.NyaruruTale [shadowJar].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PixelPreviewer [:Test8.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PixelPreviewer [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.升级 Gradle 包装器.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.构建 PixelPreviewer.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Windowsredstone/IdeaProjects/PixelPreviewer&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Users/Windowsredstone/IdeaProjects/NyaruruTale/src/main/java/io/github/e9ae9933/nyaruru/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;应用程序.io.github.e9ae9933.nyaruru.aic.Test8.executor&quot;: &quot;Run&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="io.github.e9ae9933.nyaruru.pxlsloader" />
@@ -167,19 +144,6 @@
     </key>
   </component>
   <component name="RunManager" selected="应用程序.io.github.e9ae9933.nyaruru.aic.Test8">
-    <configuration name="Test15UnpackBase64" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.Test15UnpackBase64" />
-      <module name="NyaruruTale.test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Test8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.Test8" />
       <module name="NyaruruTale.test" />
@@ -207,8 +171,10 @@
       </method>
     </configuration>
     <configuration name="io.github.e9ae9933.nyaruru.aic.Test8" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="21" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="io.github.e9ae9933.nyaruru.aic.Test8" />
-      <module name="NyaruruTale.main" />
+      <module name="NyaruruTale-PixelPreviewerBranch.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="io.github.e9ae9933.nyaruru.aic.*" />
@@ -241,20 +207,42 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="PixelPreviewer [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
+      <item itemvalue="Gradle.PixelPreviewer [clean]" />
       <item itemvalue="Gradle.NyaruruTale [shadowJar]" />
       <item itemvalue="应用程序.io.github.e9ae9933.nyaruru.aic.Test8" />
       <item itemvalue="应用程序.Test8" />
-      <item itemvalue="应用程序.Test15UnpackBase64" />
       <item itemvalue="应用程序.TheiaMain" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.NyaruruTale [shadowJar]" />
         <item itemvalue="应用程序.io.github.e9ae9933.nyaruru.aic.Test8" />
+        <item itemvalue="Gradle.PixelPreviewer [clean]" />
         <item itemvalue="应用程序.Test8" />
         <item itemvalue="应用程序.TheiaMain" />
-        <item itemvalue="应用程序.Test15UnpackBase64" />
       </list>
     </recent_temporary>
   </component>
@@ -283,7 +271,15 @@
       <option name="project" value="LOCAL" />
       <updated>1696079420754</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="clear">
+      <option name="closed" value="true" />
+      <created>1719394966508</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719394966508</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,7 +296,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test8" />
     <MESSAGE value="Testtheia" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testtheia" />
+    <MESSAGE value="clear" />
+    <option name="LAST_COMMIT_MESSAGE" value="clear" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

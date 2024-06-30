@@ -14,6 +14,7 @@ import io.github.e9ae9933.nyaruru.pxlsloader.PxlPose;
 import io.github.e9ae9933.nyaruru.pxlsloader.PxlSequence;
 import io.github.e9ae9933.nyaruru.pxlsloader.Utils;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.filechooser.FileFilter;
 import java.awt.*;
@@ -40,13 +41,13 @@ public class Test8
 				@Override
 				public boolean accept(File f)
 				{
-					return f.isDirectory()||f.getName().toLowerCase().endsWith(".pxl") || f.getName().toLowerCase().endsWith(".pxls");
+					return f.isDirectory()||f.getName().toLowerCase().endsWith(".pxl") || f.getName().toLowerCase().endsWith(".pxls") || f.getName().toLowerCase().endsWith(".pxl.bytes") || f.getName().toLowerCase().endsWith(".pxls.bytes");
 				}
 
 				@Override
 				public String getDescription()
 				{
-					return ".pxl, .pxls";
+					return ".pxl, .pxls, .pxl.bytes, .pxls.bytes";
 				}
 			});
 			SwingFrame frame = new SwingFrame();
@@ -104,6 +105,48 @@ public class Test8
 					{
 						a=sequence.createFrameAnimator();
 					}
+					if(info.keyPressed.isPressed(KeyEvent.VK_CONTROL)&&info.keyPressed.isFirstPressed(KeyEvent.VK_S))
+					{
+						try
+						{
+							File dir=Utils.chooseDirectory();
+							FrameAnimator fa=sequence.createFrameAnimator();
+							int w=sequence.getWidth();
+							int h=sequence.getHeight();
+							//fa.
+							int n=sequence.getFrameCount();
+							for(int i=0;i<n;i++)
+							{
+								//texture
+								VolatileTexture texture=new VolatileTexture();
+								texture.createNew(w,h);
+								fa.renderTo(texture,w/2,h/2,0);
+								StringJoiner sj=new StringJoiner("_");
+								sj.add(pose.getTitle());
+								sj.add("pose"+poseId);
+								sj.add("sequence"+sequenceId);
+								sj.add("frame"+i);
+								sj.add("lasts"+sequence.getFrame(i).getCrf60());
+								if(i==sequence.getLoopTo())
+									sj.add("loop");
+								ImageIO.write(texture.toBufferedImage(),"png",new File(dir,sj.toString()+".png"/*k*/));
+								//ImageIOtexture.toBufferedImage()
+								fa.stepFrame();;
+								texture.end();
+							}
+
+
+						}
+						catch (Exception e)
+						{
+							StringWriter sw=new StringWriter();
+							PrintWriter w=new PrintWriter(sw);
+							e.printStackTrace(w);
+							w.close();
+//							sw.close();
+							JOptionPane.showMessageDialog(null,sw.toString(),null,JOptionPane.ERROR_MESSAGE);
+						}
+					}
 					if(info.keyPressed.isPressed(KeyEvent.VK_CONTROL)&&info.keyPressed.isPressed(KeyEvent.VK_C))
 					{
 						if(copyState==0)
@@ -137,7 +180,8 @@ public class Test8
 							使用 空格 暂停。
 							使用 Ctrl + C 复制当前姿势。
 							使用 回车 来步进。
-							使用 R 来重置。""",50,50,16,Color.BLACK);
+							使用 R 来重置。
+							使用 Ctrl + S 保存为图片。""",50,50,16,Color.BLACK);
 					info.texture.drawString("(1-indexed) pose %d / %d, sequence %d / %d".formatted(poseId + 1, chara.getPoseCount(), sequenceId + 1, pose.getSequenceCount()), 50, 400, 16, Color.BLACK);
 					info.texture.drawString(a.toString(), 50, 440, 16, Color.BLACK);
 					tickRecorder.waitUntilNextTick(60.0);

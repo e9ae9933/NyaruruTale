@@ -81,8 +81,8 @@ public class VolatileTexture extends Texture
 	public BufferedImage toBufferedImage()
 	{
 //		validate();
-		throw new UnsupportedOperationException();
-//		return delegate.getSnapshot();
+//		throw new UnsupportedOperationException();
+		return delegate.getSnapshot();
 	}
 
 	@Override
